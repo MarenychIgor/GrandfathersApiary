@@ -1,0 +1,63 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2024
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{C301832B-F619-4DA4-AC70-08532B81138B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Feature", "Feature", "{56951DAA-7F66-43F7-89A8-07EA9FA22E11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Foundation", "Foundation", "{9F7D8468-6DD6-44B9-BBB1-4510F947BBF3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GrandfathersApiary", "GrandfathersApiary", "{E4665D6B-F7D6-44FD-8473-5F2495374B12}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Website", "src\Project\GrandfathersApiary\code\GrandfathersApiary.Website\GrandfathersApiary.Website.csproj", "{5C457260-3C71-4C14-8082-7BB468A101CD}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Serialization", "Serialization", "{4F0F5060-B279-4C56-A54C-6FD12572D4C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Foundation.Serialization", "src\Foundation\Serialization\code\GrandfathersApiary.Foundation.Serialization\GrandfathersApiary.Foundation.Serialization.csproj", "{43E1CC57-9B17-4FAB-8EFD-5A3915E9B92D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Navigation", "Navigation", "{5CD246A1-DB3B-4F14-B838-F6D0513953FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Feature.Navigation", "src\Feature\Navigation\code\GrandfathersApiary.Feature.Navigation\GrandfathersApiary.Feature.Navigation.csproj", "{C3BCCC64-412E-49B2-ABED-4A6F89169AA3}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configuration", "{1E6DCFBE-A937-4519-909F-140F682A98E3}"
+	ProjectSection(SolutionItems) = preProject
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5C457260-3C71-4C14-8082-7BB468A101CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5C457260-3C71-4C14-8082-7BB468A101CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5C457260-3C71-4C14-8082-7BB468A101CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5C457260-3C71-4C14-8082-7BB468A101CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{43E1CC57-9B17-4FAB-8EFD-5A3915E9B92D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{43E1CC57-9B17-4FAB-8EFD-5A3915E9B92D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{43E1CC57-9B17-4FAB-8EFD-5A3915E9B92D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{43E1CC57-9B17-4FAB-8EFD-5A3915E9B92D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C3BCCC64-412E-49B2-ABED-4A6F89169AA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C3BCCC64-412E-49B2-ABED-4A6F89169AA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C3BCCC64-412E-49B2-ABED-4A6F89169AA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C3BCCC64-412E-49B2-ABED-4A6F89169AA3}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{E4665D6B-F7D6-44FD-8473-5F2495374B12} = {C301832B-F619-4DA4-AC70-08532B81138B}
+		{5C457260-3C71-4C14-8082-7BB468A101CD} = {E4665D6B-F7D6-44FD-8473-5F2495374B12}
+		{4F0F5060-B279-4C56-A54C-6FD12572D4C1} = {9F7D8468-6DD6-44B9-BBB1-4510F947BBF3}
+		{43E1CC57-9B17-4FAB-8EFD-5A3915E9B92D} = {4F0F5060-B279-4C56-A54C-6FD12572D4C1}
+		{5CD246A1-DB3B-4F14-B838-F6D0513953FC} = {56951DAA-7F66-43F7-89A8-07EA9FA22E11}
+		{C3BCCC64-412E-49B2-ABED-4A6F89169AA3} = {5CD246A1-DB3B-4F14-B838-F6D0513953FC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B183CCEA-1861-4EC8-8C7C-7C4D5D0B0794}
+	EndGlobalSection
+EndGlobal
