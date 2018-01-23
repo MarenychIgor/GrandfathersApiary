@@ -30,6 +30,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Foundati
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Feature.Navigation", "src\Feature\Navigation\code\GrandfathersApiary.Feature.Navigation.csproj", "{3773FDE1-36DC-4A2C-98BD-391547A6C6AE}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Metadata", "Metadata", "{F7FC9E2E-9465-4433-8E40-E9C15CABBA65}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Feature.Metadata", "src\Feature\Metadata\code\GrandfathersApiary.Feature.Metadata.csproj", "{8A949E8E-38B1-4070-B491-4D71E2D044AB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -48,6 +52,10 @@ Global
 		{3773FDE1-36DC-4A2C-98BD-391547A6C6AE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3773FDE1-36DC-4A2C-98BD-391547A6C6AE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3773FDE1-36DC-4A2C-98BD-391547A6C6AE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A949E8E-38B1-4070-B491-4D71E2D044AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A949E8E-38B1-4070-B491-4D71E2D044AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A949E8E-38B1-4070-B491-4D71E2D044AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A949E8E-38B1-4070-B491-4D71E2D044AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +67,8 @@ Global
 		{4E54A211-A81A-4EAB-BB95-D2ECBDDE8D2E} = {E4665D6B-F7D6-44FD-8473-5F2495374B12}
 		{F8E84CE1-0168-4DE4-AE83-0361298EFFA2} = {4F0F5060-B279-4C56-A54C-6FD12572D4C1}
 		{3773FDE1-36DC-4A2C-98BD-391547A6C6AE} = {5CD246A1-DB3B-4F14-B838-F6D0513953FC}
+		{F7FC9E2E-9465-4433-8E40-E9C15CABBA65} = {56951DAA-7F66-43F7-89A8-07EA9FA22E11}
+		{8A949E8E-38B1-4070-B491-4D71E2D044AB} = {F7FC9E2E-9465-4433-8E40-E9C15CABBA65}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B183CCEA-1861-4EC8-8C7C-7C4D5D0B0794}
