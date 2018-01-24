@@ -2,7 +2,7 @@
 ID: "e5511098-eac0-44ba-a20d-f1ac6ba3288a"
 Parent: "131ea0e1-c186-4360-a2e2-66bc5a8d1131"
 Template: "99f8905d-4a87-4eb8-9f8b-a9bebfb3add6"
-Path: /sitecore/layout/Renderings/Feature/Metadata/HTML Metadata
+Path: /sitecore/layout/Renderings/Feature/Metadata/HTML metadata
 DB: master
 SharedFields:
 - ID: "51b435bc-f7b9-478a-9c51-52916af96ff5"

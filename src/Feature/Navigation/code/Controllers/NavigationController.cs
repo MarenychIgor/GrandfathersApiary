@@ -27,7 +27,7 @@ namespace GrandfathersApiary.Feature.Navigation.Controllers
         {
             var result = new NavigationViewModel();
 
-            var currentUrl = LinkManager.GetItemUrl(rootItem);
+            var currentUrl = LinkManager.GetItemUrl(Context.Item);
             var childrenItems = rootItem.Children.Where(IsAllowedToShow)
                                             .OrderByDescending(x => x.TemplateName == TemplateNames.LandingPage);
 

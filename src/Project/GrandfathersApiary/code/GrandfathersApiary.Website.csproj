@@ -501,6 +501,7 @@
     <Content Include="Views\Website\Layouts\Empty.cshtml" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <Content Include="Views\Website\Sublayouts\HeaderPartial.cshtml" />
+    <Content Include="Views\Website\Sublayouts\TwoColumnGrid.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

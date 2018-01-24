@@ -13,7 +13,7 @@
         <ul class="navbar-nav">
             @foreach (var item in Model.Items)
             {
-                var activeClass = item.IsActive ? "active" : string.Empty;
+                var activeClass = item.IsActive || item.Children.Any(x => x.IsActive) ? "active" : string.Empty;
 
                 if (item.Children.Any())
                 {
@@ -25,7 +25,8 @@
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             @foreach (var child in item.Children)
                             {
-                                <a class="dropdown-item" href="@child.Url">@child.Title</a>
+                                var fontStyle = child.IsActive ? "bold" : "normal";
+                                <a class="dropdown-item" href="@child.Url" style="font-weight: @fontStyle">@child.Title</a>
                             }
                         </div>
                     </li>

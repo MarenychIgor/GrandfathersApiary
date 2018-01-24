@@ -2,7 +2,7 @@
 ID: "121fa9e9-a139-4fb2-a50b-8c9985abd23b"
 Parent: "9d384602-962f-471d-bdef-941839376e26"
 Template: "2a3e91a0-7987-44b5-ab34-35c2d9de83b9"
-Path: /sitecore/layout/Renderings/Feature/Navigation/HeaderNavigationMenu
+Path: /sitecore/layout/Renderings/Feature/Navigation/Header navigation menu
 DB: master
 SharedFields:
 - ID: "ded9e431-3604-4921-a4b3-a6ec7636a5b6"

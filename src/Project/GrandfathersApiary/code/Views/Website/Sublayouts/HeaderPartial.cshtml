@@ -16,14 +16,14 @@
             var title = imageField.Alt;
 
             <div class="col-md-3">
-                <a class="logo" href="/" title="@title">
+                <a href="/" title="@title">
                     @Html.Sitecore().Field(headerLogoKey, item, null)
                 </a>
             </div>
         }
     }
-            <div class="col-md-9">
-                @Html.Sitecore().Placeholder("header-navigation")
-            </div>
+        <div class="col-md-9">
+            @Html.Sitecore().Placeholder("header-navigation")
+        </div>
     </div>
 </div>

@@ -1,0 +1,18 @@
+﻿---
+ID: "7d12a151-f7ae-49be-bcd1-af7d3d121fb3"
+Parent: "0c24a4c6-fc21-4acb-9186-27b6c0066f63"
+Template: "e269fbb5-3750-427a-9149-7aa950b49301"
+Path: /sitecore/templates/Feature/RichText/RichText/Content
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180124T152253Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin
