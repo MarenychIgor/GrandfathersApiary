@@ -1,0 +1,38 @@
+﻿---
+ID: "6488fe80-d990-482b-8380-9295feda02fb"
+Parent: "b787501c-5fd3-4f74-9020-0124d367dde9"
+Template: "b787501c-5fd3-4f74-9020-0124d367dde9"
+Path: /sitecore/templates/Feature/Navigation/Navigable/__Standard Values
+DB: master
+SharedFields:
+- ID: "5cfdcc88-90e8-488f-bed8-e468ece13d2e"
+  Hint: ShowChildren
+  Type: Checkbox
+  Value: 1
+- ID: "982cca13-8fb7-4884-a1b8-faf971aac47b"
+  Hint: ShowInFooterNavigation
+  Type: Checkbox
+  Value: 1
+- ID: "b1315f9c-1e1d-4dcb-88a4-5cf323c84181"
+  Hint: ShowInHeaderNavigation
+  Type: Checkbox
+  Value: 1
+- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
+  Hint: __Enable item fallback
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180123T114847Z
+    - ID: "4d4e3980-8da2-475f-b643-f72e2b0e5fd8"
+      Hint: NavigationTitle
+      Value: $name
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

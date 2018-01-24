@@ -98,6 +98,9 @@
       <SubType>Designer</SubType>
     </Content>
     <None Include="packages.config" />
+    <Content Include="Views\Web.config" />
+    <None Include="Properties\PublishProfiles\local.pubxml" />
+    <Content Include="Views\Metadata\MetadataPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

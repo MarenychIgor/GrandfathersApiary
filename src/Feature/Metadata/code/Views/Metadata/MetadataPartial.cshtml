@@ -1,0 +1,34 @@
+﻿@{
+    var item = Sitecore.Context.Item;
+    var site = Sitecore.Context.Site;
+    var database = site.Database;
+
+    var rootItem = database.GetItem(site.RootPath);
+}
+<title>@item["BrowserTitle"]</title>
+<meta name="description" content="@item["Description"]" />
+<meta name="keywords" content="@item["Keywords"]" />
+<meta name="author" content="@item["Author"]" />
+@Html.Raw(rootItem["Verification"])
+
+@{
+    var content = String.Empty;
+    var isIndex = !string.IsNullOrWhiteSpace(item["NoIndex"]);
+    var isFollow = !string.IsNullOrWhiteSpace(item["NoFollow"]);
+}
+@if (isIndex)
+{
+    content += "noindex";
+}
+@if (isIndex && isFollow)
+{
+    content += ",";
+}
+@if (isFollow)
+{
+    content += "nofollow";
+}
+@if (!String.IsNullOrEmpty(content))
+{
+    <meta name=“robots” content=“@content” />
+}

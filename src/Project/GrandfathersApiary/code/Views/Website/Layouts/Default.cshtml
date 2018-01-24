@@ -1,0 +1,35 @@
+﻿@using Sitecore.Mvc.Analytics.Extensions
+@inherits WebViewPage
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/Content/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400,500,700" rel="stylesheet">
+    @if (!Sitecore.Context.PageMode.IsExperienceEditor)
+    {
+        @Html.Sitecore().Placeholder("head")
+    }
+    @Html.Sitecore().VisitorIdentification()
+</head>
+<body :class="{'ee-mode': isExperienceEditorEditMode || isExperienceEditorPreviewMode, 'ee-edit-mode': isExperienceEditorEditMode, 'ee-preview-mode': isExperienceEditorPreviewMode }"
+      :style="{ paddingTop: isExperienceEditorEditMode || isExperienceEditorPreviewMode ? 0 : headerSpace + 'px' }"
+      v-touch:swipeleft="swipeleft" v-touch:swiperight="swiperight" v-touch:tap="tap">
+    <header class="header">
+        @Html.Sitecore().Placeholder("header")
+    </header>
+    @*@Html.Sitecore().Placeholder("main")
+    <footer class="footer">
+        @Html.Sitecore().Placeholder("footer")
+    </footer>*@
+
+    <script src="~/Content/js/jquery-3.2.1.slim.min.js"></script>
+    <script src="~/Content/js/popper.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+</body>
+</html>
