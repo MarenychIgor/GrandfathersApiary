@@ -482,13 +482,6 @@
     <Content Include="App_Data\Dianoga Tools\SVGO\node_modules\svgo\bin\svgo" />
     <Content Include="App_Data\Dianoga Tools\SVGO\node_modules\svgo\.svgo.yml" />
     <Content Include="App_Data\Dianoga Tools\SVGO\node_modules\svgo\.npmignore" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.Svg.config" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.Strategy.MediaCacheAsync.config" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.Strategy.GetMediaStreamSync.config.disabled" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.Png.config" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.Jpeg.config" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.ExcludePaths.config.example" />
-    <Content Include="App_Config\Include\Dianoga\Dianoga.config" />
     <Content Include="App_Config\Include\GrandfathersApiary.Website.config" />
     <Content Include="App_Config\Include\z.GrandfathersApiary.DevSettings.config" />
     <None Include="packages.config" />
@@ -502,6 +495,8 @@
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <Content Include="Views\Website\Sublayouts\HeaderPartial.cshtml" />
     <Content Include="Views\Website\Sublayouts\TwoColumnGrid.cshtml" />
+    <Content Include="Views\Website\Layouts\MainLayout.cshtml" />
+    <Content Include="Views\Website\Sublayouts\ThreeColumnGrid.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

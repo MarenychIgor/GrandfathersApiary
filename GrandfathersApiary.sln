@@ -38,6 +38,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "RichText", "RichText", "{23
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Feature.RichText", "src\Feature\RichText\code\GrandfathersApiary.Feature.RichText.csproj", "{D652E72B-355A-45C8-8DB3-BA208A5FA31C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ImageCarousel", "ImageCarousel", "{A0790584-4004-4EE2-B414-2C5CB9F1A5A8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Feature.ImageCarousel", "src\Feature\ImageCarousel\code\GrandfathersApiary.Feature.ImageCarousel.csproj", "{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -64,6 +68,10 @@ Global
 		{D652E72B-355A-45C8-8DB3-BA208A5FA31C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D652E72B-355A-45C8-8DB3-BA208A5FA31C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D652E72B-355A-45C8-8DB3-BA208A5FA31C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -79,6 +87,8 @@ Global
 		{8A949E8E-38B1-4070-B491-4D71E2D044AB} = {F7FC9E2E-9465-4433-8E40-E9C15CABBA65}
 		{2343F35E-3B45-490E-8798-E11F1365C7E0} = {56951DAA-7F66-43F7-89A8-07EA9FA22E11}
 		{D652E72B-355A-45C8-8DB3-BA208A5FA31C} = {2343F35E-3B45-490E-8798-E11F1365C7E0}
+		{A0790584-4004-4EE2-B414-2C5CB9F1A5A8} = {56951DAA-7F66-43F7-89A8-07EA9FA22E11}
+		{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3} = {A0790584-4004-4EE2-B414-2C5CB9F1A5A8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B183CCEA-1861-4EC8-8C7C-7C4D5D0B0794}

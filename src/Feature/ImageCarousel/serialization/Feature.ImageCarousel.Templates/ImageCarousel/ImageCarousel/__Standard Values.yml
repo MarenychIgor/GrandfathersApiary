@@ -1,0 +1,18 @@
+﻿---
+ID: "af502e7e-c5ba-4bfd-8aa6-ecd7322124ad"
+Parent: "ea37fbd6-91e9-4aec-9d1a-e7c947f06f3d"
+Template: "ea37fbd6-91e9-4aec-9d1a-e7c947f06f3d"
+Path: /sitecore/templates/Feature/ImageCarousel/ImageCarousel/__Standard Values
+DB: master
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180125T085807Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

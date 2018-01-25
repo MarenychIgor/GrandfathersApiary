@@ -1,0 +1,23 @@
+﻿---
+ID: "0e7b34aa-9439-4931-b163-db6c48328567"
+Parent: "187c7a76-a6d7-4b63-baab-545263935593"
+Template: "187c7a76-a6d7-4b63-baab-545263935593"
+Path: /sitecore/templates/Feature/ImageCarousel/ImageCarouselFolder/__Standard Values
+DB: master
+SharedFields:
+- ID: "fd4e2050-186c-4375-8b99-e8a85dd7436e"
+  Hint: __Enable item fallback
+  Type: Checkbox
+  Value: 1
+Languages:
+- Language: en
+  Versions:
+  - Version: 1
+    Fields:
+    - ID: "25bed78c-4957-4165-998a-ca1b52f67497"
+      Hint: __Created
+      Value: 20180125T085653Z
+    - ID: "5dd74568-4d4b-44c1-b513-0af5f4cda34f"
+      Hint: __Created by
+      Value: |
+        sitecore\admin

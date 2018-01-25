@@ -9,12 +9,12 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{3773FDE1-36DC-4A2C-98BD-391547A6C6AE}</ProjectGuid>
+    <ProjectGuid>{BBBCAFAA-C5E5-470D-B7F1-2FF2D4BEE3F3}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GrandfathersApiary.Feature.Navigation</RootNamespace>
-    <AssemblyName>GrandfathersApiary.Feature.Navigation</AssemblyName>
+    <RootNamespace>GrandfathersApiary.Feature.ImageCarousel</RootNamespace>
+    <AssemblyName>GrandfathersApiary.Feature.ImageCarousel</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <Use64BitIISExpress />
@@ -94,12 +94,11 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Config\Include\Feature\Feature.Navigation.Serialization.config" />
+    <Content Include="App_Config\Include\Feature\Feature.ImageCarousel.Serialization.config" />
     <None Include="packages.config" />
     <None Include="Properties\PublishProfiles\local.pubxml" />
     <Content Include="Views\Web.config" />
-    <Content Include="Views\Navigation\HeaderNavigationPartial.cshtml" />
-    <Content Include="Views\Navigation\AsideNavigationPartial.cshtml" />
+    <Content Include="Views\ImageCarousel\ImageCarouselPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -111,12 +110,11 @@
     <None Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Constants\TemplateNames.cs" />
-    <Compile Include="Controllers\NavigationController.cs" />
-    <Compile Include="Constants\FieldNames.cs" />
-    <Compile Include="Models\NavigationItem.cs" />
-    <Compile Include="Models\NavigationViewModel.cs" />
+    <Compile Include="Controllers\ImageCarouselController.cs" />
+    <Compile Include="Models\ImageCarouselItem.cs" />
+    <Compile Include="Models\ImageCarouselViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Templates.cs" />
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>
@@ -132,9 +130,9 @@
         <WebProjectProperties>
           <UseIIS>True</UseIIS>
           <AutoAssignPort>True</AutoAssignPort>
-          <DevelopmentServerPort>63406</DevelopmentServerPort>
+          <DevelopmentServerPort>58789</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:63406/</IISUrl>
+          <IISUrl>http://localhost:58789/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

@@ -1,0 +1,51 @@
+﻿@using GrandfathersApiary.Feature.Navigation.Models
+
+@model NavigationViewModel
+
+@foreach (var item in Model.Items)
+{
+    var level = 1;
+    @RenderNavigationItems(item, level)
+}
+
+@helper RenderNavigationItems(NavigationItem item, int level)
+{
+    var fontWeightClass = item.IsActive ? "bold" : "normal";
+    <a href="@item.Url">
+        <span style="font-weight: @fontWeightClass">@item.Title</span>
+    </a>
+
+    if (item.Children.Any())
+    {
+        var nextLevel = level + 1;
+
+        <span style="font-weight: bolder; cursor: pointer;" onclick="toogleItem(event, @level)">+</span>
+        foreach (var child in item.Children)
+        {
+            var toggleClass = child.IsActive || item.HasActiveItemOnLowerLayer ? string.Empty : "hide"; 
+
+            <div class="js-child-@level @toggleClass" style="padding-left: 10px;">
+                @RenderNavigationItems(child, nextLevel)
+            </div>
+        }
+    }
+}
+
+<script>
+    function toogleItem(e, level) {
+        var selector = `.js-child-${level}`;
+
+        var parentNode = e.target.parentNode;
+        var childElement = parentNode.querySelectorAll(selector);
+
+        childElement.forEach(function(child) {
+            child.classList.toggle("hide");
+        });
+    }
+</script>
+
+<style>
+    .hide {
+        display: none;
+    }
+</style>
