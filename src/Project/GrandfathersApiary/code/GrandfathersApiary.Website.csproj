@@ -484,6 +484,13 @@
     <Content Include="App_Data\Dianoga Tools\SVGO\node_modules\svgo\.npmignore" />
     <Content Include="App_Config\Include\GrandfathersApiary.Website.config" />
     <Content Include="App_Config\Include\z.GrandfathersApiary.DevSettings.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Svg.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Strategy.MediaCacheAsync.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Strategy.GetMediaStreamSync.config.disabled" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Png.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.Jpeg.config" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.ExcludePaths.config.example" />
+    <Content Include="App_Config\Include\Dianoga\Dianoga.config" />
     <None Include="packages.config" />
     <Content Include="Content\css\bootstrap.min.css" />
     <Content Include="Content\js\bootstrap.min.js" />
