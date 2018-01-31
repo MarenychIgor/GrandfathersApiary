@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.27130.2024
+VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Project", "Project", "{C301832B-F619-4DA4-AC70-08532B81138B}"
 EndProject
@@ -22,6 +22,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Configuration", "Configurat
 		build.bat = build.bat
 		build.fsx = build.fsx
 		main.pubxml = main.pubxml
+		Readme.md = Readme.md
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GrandfathersApiary.Website", "src\Project\GrandfathersApiary\code\GrandfathersApiary.Website.csproj", "{4E54A211-A81A-4EAB-BB95-D2ECBDDE8D2E}"
