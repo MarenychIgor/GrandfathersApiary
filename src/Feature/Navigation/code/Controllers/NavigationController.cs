@@ -1,13 +1,13 @@
 ﻿using GrandfathersApiary.Feature.Navigation.Constants;
 using GrandfathersApiary.Feature.Navigation.Models;
 using Sitecore;
+using Sitecore.Data;
 using Sitecore.Data.Items;
 using Sitecore.Links;
+using Sitecore.Sites;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web.Mvc;
-using Sitecore.Data;
-using Sitecore.Sites;
 
 namespace GrandfathersApiary.Feature.Navigation.Controllers
 {
@@ -59,11 +59,11 @@ namespace GrandfathersApiary.Feature.Navigation.Controllers
             var result = new List<NavigationItem>();
 
             var currentUrl = LinkManager.GetItemUrl(Context.Item);
-            var childrenItems = rootItem.Children.Where(IsAllowedToShow)
-                .OrderByDescending(x => x.TemplateName == TemplateNames.LandingPage);
+            var childrenItems = rootItem.Children.Where(IsAllowedToShowInHeader)
+                .OrderByDescending(x => x.TemplateID == Templates.LandingPageTemplate.ID);
 
-            var homePage = GetNavigationItem(rootItem, currentUrl, getChildren: false);
-            var children = childrenItems.Select(x => GetNavigationItem(x, currentUrl)).ToList();
+            var homePage = GetNavigationItem(rootItem, currentUrl, FieldNames.ShowInHeaderNavigation, getChildren: false);
+            var children = childrenItems.Select(x => GetNavigationItem(x, currentUrl, FieldNames.ShowInHeaderNavigation)).ToList();
 
             result.Add(homePage);
             result.AddRange(children);
@@ -75,43 +75,59 @@ namespace GrandfathersApiary.Feature.Navigation.Controllers
         {
             var currentUrl = LinkManager.GetItemUrl(Context.Item);
 
-            var homePage = GetNavigationItem(rootItem, currentUrl);
-            homePage.Children = homePage.Children.OrderByDescending(x => x.TemplateName == TemplateNames.LandingPage).ToList();
+            var homePage = GetNavigationItem(rootItem, currentUrl, FieldNames.ShowInAsideNavigation);
+            SortChildren(homePage);
 
             return homePage;
         }
 
-        private NavigationItem GetNavigationItem(Item item, string currentUrl, bool getChildren = true)
+        private void SortChildren(NavigationItem homePage)
+        {
+            var searchPage = homePage.Children.FirstOrDefault(x => x.ItemId == Templates.SearchPage.ID);
+
+            homePage.Children = homePage.Children
+                .Where(x => x.ItemId != Templates.SearchPage.ID)
+                .OrderByDescending(x => x.TemplateId == Templates.LandingPageTemplate.ID)
+                .ToList();
+
+            if (searchPage != null)
+            {
+                homePage.Children.Add(searchPage);
+            }
+        }
+
+        private NavigationItem GetNavigationItem(Item item, string currentUrl, string showInFieldName, bool getChildren = true)
         {
             var url = LinkManager.GetItemUrl(item);
-
+            
             var result = new NavigationItem
             {
                 Title = item.Fields[FieldNames.Title].ToString(),
                 Url = url,
-                TemplateName = item.TemplateName,
-                ShowChildren = MainUtil.GetBool(item[FieldNames.ShowChildren], false),
+                TemplateId = item.TemplateID,
+                ItemId = item.ID,
+                ShowChildren = MainUtil.GetBool(item[FieldNames.ShowChildren], defaultValue: false),
                 IsActive = url == currentUrl,
-                Children = getChildren ? GetChildren(item, currentUrl) : new List<NavigationItem>()
+                Children = getChildren ? GetChildren(item, currentUrl, showInFieldName) : new List<NavigationItem>()
             };
 
             return result;
         }
 
-        private List<NavigationItem> GetChildren(Item item, string currentUrl)
+        private List<NavigationItem> GetChildren(Item item, string currentUrl, string showInFieldName)
         {
             var result = Enumerable.Empty<NavigationItem>();
-            var children = item.Children.Where(IsAllowedToShow).ToList();
 
-            if (children.Any())
+            if (item.Children.Any())
             {
-                result = children.Select(x => GetNavigationItem(x, currentUrl));
+                result = item.Children.Where(x => MainUtil.GetBool(x[showInFieldName], defaultValue: false))
+                                      .Select(x => GetNavigationItem(x, currentUrl, showInFieldName));
             }
 
             return result.ToList();
         }
 
-        private bool IsAllowedToShow(Item item)
+        private bool IsAllowedToShowInHeader(Item item)
         {
             var result = item.Fields[FieldNames.Title].HasValue &&
                          MainUtil.GetBool(item[FieldNames.ShowInHeaderNavigation], defaultValue: false);
@@ -136,6 +152,6 @@ namespace GrandfathersApiary.Feature.Navigation.Controllers
             }
 
             return false;
-        } 
+        }
     }
 }

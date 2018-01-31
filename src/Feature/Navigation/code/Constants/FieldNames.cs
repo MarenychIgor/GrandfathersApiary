@@ -4,6 +4,7 @@
     {
         public static string Title = "NavigationTitle";
         public static string ShowInHeaderNavigation = "ShowInHeaderNavigation";
+        public static string ShowInAsideNavigation = "ShowInAsideNavigation";
         public static string ShowChildren = "ShowChildren";
     }
 }

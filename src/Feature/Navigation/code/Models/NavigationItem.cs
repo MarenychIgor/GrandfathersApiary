@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Sitecore.Data;
+using System.Collections.Generic;
 
 namespace GrandfathersApiary.Feature.Navigation.Models
 {
@@ -6,7 +7,8 @@ namespace GrandfathersApiary.Feature.Navigation.Models
     {
         public string Title { get; set; }
         public string Url { get; set; }
-        public string TemplateName { get; set; }
+        public ID TemplateId { get; set; }
+        public ID ItemId { get; set; }
         public bool ShowChildren { get; set; }
         public bool IsActive { get; set; }
         public bool HasActiveItemOnLowerLayer { get; set; }
