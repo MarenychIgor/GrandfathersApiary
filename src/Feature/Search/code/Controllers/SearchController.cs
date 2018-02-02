@@ -11,7 +11,8 @@ namespace GrandfathersApiary.Feature.Search.Controllers
 {
     public class SearchController : Controller
     {
-        private Database Db { get; set; }
+        private Database Db { get; }
+        private const string IndexName = "content_nesting_level_index";
 
         public SearchController()
         {
@@ -23,8 +24,7 @@ namespace GrandfathersApiary.Feature.Search.Controllers
         {
             var searchResult = Enumerable.Empty<SearchResultViewModel>();
 
-            var indexName = $"sitecore_{Db.Name.ToLower()}_index";
-            var index = ContentSearchManager.GetIndex(indexName);
+            var index = ContentSearchManager.GetIndex(IndexName);
 
             var isSearchByNestingLevel = int.TryParse(query, out int level);
 
@@ -56,9 +56,8 @@ namespace GrandfathersApiary.Feature.Search.Controllers
 
         private SearchResults<ExtendedSearchResultItem> SearchByNestingLevel(IProviderSearchContext searchContext, int level)
         {
-            // TODO: This doesn't work yet.
             var result = searchContext.GetQueryable<ExtendedSearchResultItem>()
-                .Where(x => x.NestingLevel == level)
+                .Where(x => x.NestingLevel == level.ToString())
                 .GetResults();
 
             return result;

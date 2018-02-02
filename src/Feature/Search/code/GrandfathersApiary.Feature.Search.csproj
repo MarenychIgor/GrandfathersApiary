@@ -124,6 +124,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Infrastructure\Pipelines\InitializeRoutes.cs" />
+    <Compile Include="Models\ItemHierarchicalModel.cs" />
     <Compile Include="Models\ExtendedSearchResultItem.cs" />
     <Compile Include="Models\PageNestingLevel.cs" />
     <Compile Include="Models\SearchResultViewModel.cs" />

@@ -26,6 +26,7 @@ function sendRequest(query) {
 
 function onSuccess(data) {
     clearPreviousResults();
+    clearSearchInput();
 
     var resultItems = JSON.parse(data);
     toogleEmptyResultLabel(resultItems.length == 0);
@@ -39,6 +40,10 @@ function clearPreviousResults() {
     while (searchResultHolder.firstChild) {
         searchResultHolder.removeChild(searchResultHolder.firstChild);
     }
+}
+
+function clearSearchInput() {
+    searchInput.value = '';
 }
 
 function addElement(item) {
