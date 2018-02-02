@@ -22,7 +22,7 @@
         <span style="font-weight: bolder; cursor: pointer;" onclick="toogleItem(event, @level)">+</span>
         foreach (var child in item.Children)
         {
-            var toggleClass = child.IsActive || item.HasActiveItemOnLowerLayer ? string.Empty : "hide"; 
+            var toggleClass = child.IsActive || item.HasActiveItemOnLowerLayer ? string.Empty : "d-none"; 
 
             <div class="js-child-@level @toggleClass" style="padding-left: 10px;">
                 @RenderNavigationItems(child, nextLevel)
@@ -31,21 +31,4 @@
     }
 }
 
-<script>
-    function toogleItem(e, level) {
-        var selector = `.js-child-${level}`;
-
-        var parentNode = e.target.parentNode;
-        var childElement = parentNode.querySelectorAll(selector);
-
-        childElement.forEach(function(child) {
-            child.classList.toggle("hide");
-        });
-    }
-</script>
-
-<style>
-    .hide {
-        display: none;
-    }
-</style>
+<script src="~/Scripts/Navigation/navigation.js"></script>
