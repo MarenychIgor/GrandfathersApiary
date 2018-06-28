@@ -53,10 +53,10 @@
       <HintPath>..\..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch">
-      <HintPath>libs\Sitecore.ContentSearch.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\GrandfathersApiary\Website\bin\Sitecore.ContentSearch.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.ContentSearch.Linq">
-      <HintPath>libs\Sitecore.ContentSearch.Linq.dll</HintPath>
+      <HintPath>..\..\..\..\..\..\inetpub\wwwroot\GrandfathersApiary\Website\bin\Sitecore.ContentSearch.Linq.dll</HintPath>
     </Reference>
     <Reference Include="Sitecore.Kernel, Version=10.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\..\..\packages\Sitecore.Kernel.NoReferences.8.2.170728\lib\NET452\Sitecore.Kernel.dll</HintPath>
